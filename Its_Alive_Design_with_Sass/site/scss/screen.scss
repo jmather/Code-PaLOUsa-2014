@@ -1,0 +1,240 @@
+// Imports
+@import "compass/css3";
+@import "susy";
+@import "modular-scale";
+@import "scut";
+@import "sassybuttons";
+@import "breakpoint";
+
+// Susy Grid setup
+$map: (
+  columns: 12,
+  gutters: 1.5,
+  math: fluid,
+);
+@include layout($map float inside);
+
+// Breakpoints
+$small: 640px;
+$medium: 641px 1024px;
+$large-only: max-width 1025px;
+
+// Modular Scale
+$ms-base: 1rem 3rem;
+$ms-ratio: $golden;
+
+
+// Variables
+$light-gray: #ddd !default;
+$mid-gray: #aaa !default;
+$dark-gray: #444 !default;
+$main-red: #a6450b !default;
+$link-color: $main-red !default;
+
+
+/* -------------------------------------------------------------------------*/
+/* Typography */
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Titillium Web', sans-serif;
+  margin: 0 0 (ms(0)/2) 0;
+}
+h1 {
+  font-size: ms(4);
+  @include breakpoint($small) { font-size: ms(5); }
+
+  .site-title & {
+    color: $main-red;
+    font-size: ms(3);
+    margin: 60px 0 0;
+    @include breakpoint($small) { font-size: ms(4); }
+  }
+}
+h2 {
+  font-size: ms(3);
+  @include breakpoint($small) { font-size: ms(4); }
+}
+h3 {
+  font-size: ms(2);
+  @include breakpoint($small) { font-size: ms(3); }
+}
+h4 {
+  font-size: ms(1);
+  @include breakpoint($small) { font-size: ms(2); }
+}
+h5 {
+  font-size: ms(0);
+  @include breakpoint($small) { font-size: ms(1); }
+}
+h6 { font-size: ms(0); }
+
+p {
+  color: $dark-gray;
+  font-size: ms(0);
+  line-height: 1.5;
+  margin: 0 0 ms(2) 0;
+}
+.tagline {
+  color: $mid-gray;
+  font-size: ms(1);
+  font-weight: 300;
+}
+.lead {
+  font-size: ms(1);
+  font-weight: 300;
+}
+
+ul,
+ol {
+  font-size: ms(0);
+  margin: 0;
+  @include scut-list-unstyled(false);
+  li {
+    margin-bottom: ms(0)/2;
+  }
+}
+
+blockquote {
+  border-left: solid 6px $light-gray;
+  margin: ms(3) 0 ms(3) ms(3);
+  padding: 12px 10% 12px 20px;
+  @include border-left-radius(10px);
+  p {
+    color: $mid-gray;
+    font-style: italic;
+    line-height: 1.7;
+    margin-bottom: 0;
+  }
+  a {
+    display: inline-block;
+    margin-top: ms(0)/2;
+  }
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  @include scut-selected(true) {
+    color: darken($link-color, 10%);
+  }
+}
+
+
+/* -------------------------------------------------------------------------*/
+/* Layout */
+
+hr {
+  border-style: solid;
+  border-width: 1px 0 0;
+  border-color: $light-gray;
+  margin: ms(3) auto ms(2);
+  width: ms(6);
+}
+
+img {
+  margin-bottom: ms(0);
+  max-width: 100%;
+  @include border-radius(10px);
+}
+
+* { @include border-box-sizing; }
+
+html {
+  @include scut-border(44px solid $dark-gray, y n n n);
+  @include scut-border(144px solid $light-gray, n n y n);
+}
+
+body { @include container(70em); }
+
+.site-title {
+  margin-bottom: 100px;
+  text-align: center;
+  @include span(full);
+}
+
+.blog-posts { @include span(full); }
+
+.blog-post-snippet {
+  margin-bottom: 60px;
+  @include border-radius(10px);
+
+  &:nth-child(odd) {
+    background: $light-gray image-url('blog-snippet.jpg') right top no-repeat;
+    padding: 40px 50% 40px 40px;
+  }
+  &:nth-child(even) {
+    background: $light-gray image-url('blog-snippet.jpg') left top no-repeat;
+    padding: 40px 40px 40px 50%;
+  }
+}
+
+.blog-post {
+  margin-bottom: 100px;
+  @include span(full);
+
+  @include breakpoint($small) {
+    @include span(75%);
+    padding-right: 90px;
+  }
+
+  @include breakpoint($medium) {
+    padding-right: 40px;
+  }
+}
+
+.sidebar {
+  background-color: rgba($light-gray, 0.3);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  @include span(full);
+
+  @include breakpoint($small) {
+    @include border-radius(10px);
+    @include span(25%);
+  }
+
+  @include breakpoint($large-only) {
+    @include border-right-radius(0px);
+  }
+
+  p { color: $mid-gray; }
+}
+
+
+/* -------------------------------------------------------------------------*/
+/* UI Components */
+
+.button {
+  text-transform: uppercase;
+  @include sassy-button("flat", 10px, .7rem, $main-red, $text-style: "none");
+  @include scut-selected(true) { color: #fff; }
+}
+
+.pagination {
+  padding-top: ms(2);
+  margin-top: ms(4);
+  margin-bottom: ms(4);
+  overflow: hidden;
+  @include scut-border(1px solid $light-gray, y n n n);
+  .prev { float: left; }
+  .next { float: right; }
+}
+
+.page-back {
+  color: $mid-gray;
+  font-size: .8rem;
+  line-height: 1.6rem;
+  margin-left: -34px;
+  text-indent: 34px;
+  text-transform: uppercase;
+  @include scut-relative;
+  @include scut-circle(2em, $light-gray);
+  @include scut-selected(true) {
+    background-color: darken($light-gray, 10%);
+    color: $mid-gray;
+  }
+  &:before {
+    content: "";
+    @include scut-center-absolutely(.75em .75em);
+    @include scut-triangle(left, .75em, white);
+  }
+}

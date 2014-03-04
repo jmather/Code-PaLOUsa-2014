@@ -1,0 +1,407 @@
+/*
+* Scut, a collection of Sass utilities to ease and improve our implementations of common style-code patterns.
+* v0.9.1
+* Docs at http://davidtheclark.github.io/scut
+*/
+/* -------------------------------------------------------------------------*/
+/* Typography */
+/* line 37, ../scss/screen.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Titillium Web', sans-serif;
+  margin: 0 0 0.5rem 0;
+}
+
+/* line 41, ../scss/screen.scss */
+h1 {
+  font-size: 2.61803rem;
+}
+@media (min-width: 640px) {
+  /* line 41, ../scss/screen.scss */
+  h1 {
+    font-size: 3rem;
+  }
+}
+/* line 45, ../scss/screen.scss */
+.site-title h1 {
+  color: #a6450b;
+  font-size: 1.8541rem;
+  margin: 60px 0 0;
+}
+@media (min-width: 640px) {
+  /* line 45, ../scss/screen.scss */
+  .site-title h1 {
+    font-size: 2.61803rem;
+  }
+}
+
+/* line 52, ../scss/screen.scss */
+h2 {
+  font-size: 1.8541rem;
+}
+@media (min-width: 640px) {
+  /* line 52, ../scss/screen.scss */
+  h2 {
+    font-size: 2.61803rem;
+  }
+}
+
+/* line 56, ../scss/screen.scss */
+h3 {
+  font-size: 1.61803rem;
+}
+@media (min-width: 640px) {
+  /* line 56, ../scss/screen.scss */
+  h3 {
+    font-size: 1.8541rem;
+  }
+}
+
+/* line 60, ../scss/screen.scss */
+h4 {
+  font-size: 1.1459rem;
+}
+@media (min-width: 640px) {
+  /* line 60, ../scss/screen.scss */
+  h4 {
+    font-size: 1.61803rem;
+  }
+}
+
+/* line 64, ../scss/screen.scss */
+h5 {
+  font-size: 1rem;
+}
+@media (min-width: 640px) {
+  /* line 64, ../scss/screen.scss */
+  h5 {
+    font-size: 1.1459rem;
+  }
+}
+
+/* line 68, ../scss/screen.scss */
+h6 {
+  font-size: 1rem;
+}
+
+/* line 70, ../scss/screen.scss */
+p {
+  color: #444444;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 1.61803rem 0;
+}
+
+/* line 76, ../scss/screen.scss */
+.tagline {
+  color: #aaaaaa;
+  font-size: 1.1459rem;
+  font-weight: 300;
+}
+
+/* line 81, ../scss/screen.scss */
+.lead {
+  font-size: 1.1459rem;
+  font-weight: 300;
+}
+
+/* line 86, ../scss/screen.scss */
+ul,
+ol {
+  font-size: 1rem;
+  margin: 0;
+  list-style-type: none;
+  padding-left: 0;
+}
+/* line 91, ../scss/screen.scss */
+ul li,
+ol li {
+  margin-bottom: 0.5rem;
+}
+
+/* line 96, ../scss/screen.scss */
+blockquote {
+  border-left: solid 6px #dddddd;
+  margin: 1.8541rem 0 1.8541rem 1.8541rem;
+  padding: 12px 10% 12px 20px;
+  -moz-border-radius-topleft: 10px;
+  -webkit-border-top-left-radius: 10px;
+  border-top-left-radius: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+/* line 101, ../scss/screen.scss */
+blockquote p {
+  color: #aaaaaa;
+  font-style: italic;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+/* line 107, ../scss/screen.scss */
+blockquote a {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+/* line 113, ../scss/screen.scss */
+a {
+  color: #a6450b;
+  text-decoration: none;
+}
+/* line 513, ../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/scut-0.9.1/dist/_scut.scss */
+a:hover, a:focus, a:active {
+  color: #763108;
+}
+
+/* -------------------------------------------------------------------------*/
+/* Layout */
+/* line 125, ../scss/screen.scss */
+hr {
+  border-style: solid;
+  border-width: 1px 0 0;
+  border-color: #dddddd;
+  margin: 1.8541rem auto 1.61803rem;
+  width: 4.23607rem;
+}
+
+/* line 133, ../scss/screen.scss */
+img {
+  margin-bottom: 1rem;
+  max-width: 100%;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* line 11, ../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/susy-2.0.0.rc.1/sass/susy/language/susy/_box-sizing.scss */
+* *, * *::before, * *::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 141, ../scss/screen.scss */
+html {
+  border-top: 44px solid #444444;
+  border-bottom: 144px solid #dddddd;
+}
+
+/* line 146, ../scss/screen.scss */
+body {
+  max-width: 70em;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/susy-2.0.0.rc.1/sass/susy/output/support/_clearfix.scss */
+body::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 148, ../scss/screen.scss */
+.site-title {
+  margin-bottom: 100px;
+  text-align: center;
+  width: 100%;
+  float: left;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+}
+
+/* line 154, ../scss/screen.scss */
+.blog-posts {
+  width: 100%;
+  float: left;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+}
+
+/* line 156, ../scss/screen.scss */
+.blog-post-snippet {
+  margin-bottom: 60px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+/* line 160, ../scss/screen.scss */
+.blog-post-snippet:nth-child(odd) {
+  background: #dddddd url('../img/blog-snippet.jpg?1393098932') right top no-repeat;
+  padding: 40px 50% 40px 40px;
+}
+/* line 164, ../scss/screen.scss */
+.blog-post-snippet:nth-child(even) {
+  background: #dddddd url('../img/blog-snippet.jpg?1393098932') left top no-repeat;
+  padding: 40px 40px 40px 50%;
+}
+
+/* line 170, ../scss/screen.scss */
+.blog-post {
+  margin-bottom: 100px;
+  width: 100%;
+  float: left;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+}
+@media (min-width: 640px) {
+  /* line 170, ../scss/screen.scss */
+  .blog-post {
+    width: 75%;
+    float: left;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-right: 90px;
+  }
+}
+@media (min-width: 641px) and (max-width: 1024px) {
+  /* line 170, ../scss/screen.scss */
+  .blog-post {
+    padding-right: 40px;
+  }
+}
+
+/* line 184, ../scss/screen.scss */
+.sidebar {
+  background-color: rgba(221, 221, 221, 0.3);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 100%;
+  float: left;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+}
+@media (min-width: 640px) {
+  /* line 184, ../scss/screen.scss */
+  .sidebar {
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    width: 25%;
+    float: left;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+}
+@media (max-width: 1025px) {
+  /* line 184, ../scss/screen.scss */
+  .sidebar {
+    -moz-border-radius-topright: 0px;
+    -webkit-border-top-right-radius: 0px;
+    border-top-right-radius: 0px;
+    -moz-border-radius-bottomright: 0px;
+    -webkit-border-bottom-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+}
+/* line 199, ../scss/screen.scss */
+.sidebar p {
+  color: #aaaaaa;
+}
+
+/* -------------------------------------------------------------------------*/
+/* UI Components */
+/* line 206, ../scss/screen.scss */
+.button {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  padding: 0.5em 1.5em;
+  display: inline-block;
+  cursor: pointer;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFA6450B', endColorstr='#FF461D05');
+  background-color: #a6450b;
+  border: 0;
+  color: white;
+}
+/* line 15, ../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.button:hover {
+  text-decoration: none;
+}
+/* line 42, ../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.button:hover {
+  background-color: #8e3b09;
+}
+/* line 44, ../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.button:active {
+  background-color: #803508;
+}
+/* line 6, ../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.button.disabled, .button[disabled] {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
+  background: false;
+  cursor: default;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* line 74, ../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/_sassy-buttons.sass */
+.button::-moz-focus-inner {
+  padding: 0 !important;
+  margin: -1px !important;
+}
+/* line 513, ../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/scut-0.9.1/dist/_scut.scss */
+.button:hover, .button:focus, .button:active {
+  color: #fff;
+}
+
+/* line 212, ../scss/screen.scss */
+.pagination {
+  padding-top: 1.61803rem;
+  margin-top: 2.61803rem;
+  margin-bottom: 2.61803rem;
+  overflow: hidden;
+  border-top: 1px solid #dddddd;
+}
+/* line 218, ../scss/screen.scss */
+.pagination .prev {
+  float: left;
+}
+/* line 219, ../scss/screen.scss */
+.pagination .next {
+  float: right;
+}
+
+/* line 222, ../scss/screen.scss */
+.page-back {
+  color: #aaaaaa;
+  font-size: .8rem;
+  line-height: 1.6rem;
+  margin-left: -34px;
+  text-indent: 34px;
+  text-transform: uppercase;
+  position: relative;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #dddddd;
+  height: 2em;
+  width: 2em;
+}
+/* line 513, ../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/scut-0.9.1/dist/_scut.scss */
+.page-back:hover, .page-back:focus, .page-back:active {
+  background-color: #c4c4c4;
+  color: #aaaaaa;
+}
+/* line 235, ../scss/screen.scss */
+.page-back:before {
+  content: "";
+  position: absolute;
+  width: 0.75em;
+  left: 50%;
+  margin-left: -0.375em;
+  height: 0.75em;
+  top: 50%;
+  margin-top: -0.375em;
+  display: inline-block;
+  height: 0;
+  width: 0;
+  -webkit-transform: rotate(360deg);
+  border-width: 0.375em 0.75em;
+  border-style: solid;
+  border-color: transparent;
+  border-right-color: white;
+  border-left-width: 0;
+}
