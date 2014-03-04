@@ -1,4 +1,4 @@
-CodepaLOUsa2014
+Code PaLOUsa 2014
 ============
 
 CodepaLOUsa 2014 session decks, sample code, links and other stuff.
